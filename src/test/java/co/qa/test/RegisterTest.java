@@ -38,7 +38,10 @@ public class RegisterTest extends TestBase {
 		launchUrl(domainName);
 		registerPage.register();
 		Thread.sleep(3000);
-		driver.quit();
+		registerPage.fillPersonalInfo();
+		registerPage.verifyLanguage(language);
+		registerPage.verifyDomainPresent();
+		//driver.quit();
 	}
 	
 	@DataProvider(name="domainNames")
