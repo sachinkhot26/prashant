@@ -41,13 +41,14 @@ public class RegisterTest extends TestBase {
 		registerPage.fillPersonalInfo();
 		registerPage.verifyLanguage(language);
 		registerPage.verifyDomainPresent();
-		//driver.quit();
+		Thread.sleep(3000);
+		driver.quit();
 	}
 	
 	@DataProvider(name="domainNames")
 	public Object[][] passData() throws IOException, ParseException
 	{
-		return TestBase.getJSONdata("/Users/sachin/Desktop/Eclipse/PrashantWork/domain.json", "domains",2);
+		return TestBase.getJSONdata(System.getProperty("user.dir")+"/domain.json", "domains",2);
 		
 	}
 	

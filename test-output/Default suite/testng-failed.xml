@@ -6,7 +6,7 @@
       <class name="co.qa.test.RegisterTest">
         <methods>
           <include name="setUp"/>
-          <include name="registerTest" invocation-numbers="0"/>
+          <include name="registerTest" invocation-numbers="1"/>
         </methods>
       </class> <!-- co.qa.test.RegisterTest -->
     </classes>

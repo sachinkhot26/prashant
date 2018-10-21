@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34808" started-at="2018-10-21T08:53:31Z" finished-at="2018-10-21T08:54:06Z">
+  <suite name="Default suite" duration-ms="142827" started-at="2018-10-21T10:08:10Z" finished-at="2018-10-21T10:10:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34808" started-at="2018-10-21T08:53:31Z" finished-at="2018-10-21T08:54:06Z">
+    <test name="Default test" duration-ms="142827" started-at="2018-10-21T10:08:10Z" finished-at="2018-10-21T10:10:33Z">
       <class name="co.qa.test.RegisterTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="setUp" is-config="true" duration-ms="3537" started-at="2018-10-21T14:23:32Z" finished-at="2018-10-21T14:23:35Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="setUp" is-config="true" duration-ms="2956" started-at="2018-10-21T15:38:10Z" finished-at="2018-10-21T15:38:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="registerTest(java.lang.String, java.lang.String)[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="registerTest" duration-ms="31202" started-at="2018-10-21T14:23:35Z" data-provider="domainNames" finished-at="2018-10-21T14:24:06Z">
+        <test-method status="PASS" signature="registerTest(java.lang.String, java.lang.String)[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="registerTest" duration-ms="37161" started-at="2018-10-21T15:38:13Z" data-provider="domainNames" finished-at="2018-10-21T15:38:50Z">
           <params>
             <param index="0">
               <value>
@@ -20,24 +20,77 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Malayal]]>
+                <![CDATA[Malayalam]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="setUp" is-config="true" duration-ms="1339" started-at="2018-10-21T15:38:50Z" finished-at="2018-10-21T15:38:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="registerTest(java.lang.String, java.lang.String)[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="registerTest" duration-ms="54628" started-at="2018-10-21T15:38:52Z" data-provider="domainNames" finished-at="2018-10-21T15:39:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[www.assameseshaadicentre.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Assamese]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [Malayalam] but found [Malayal]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='regionalSite']"}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.13.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'Sachins-MacBook-Air.local', ip: 'fe80:0:0:0:816:6aa7:b7f8:9d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.5', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55104}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=MAC, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db), userDataDir=/var/folders/sm/g6dhhvcx5rgczyct6jl1qd4c0000gn/T/.org.chromium.Chromium.exzUyV}, takesHeapSnapshot=true, unhandledPromptBehavior=, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dfb78e71c81e5c4825dd41e7ef424778
+*** Element info: {Using=xpath, value=//input[@id='regionalSite']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Malayalam] but found [Malayal]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.qa.pages.RegisterPage.verifyLanguage(RegisterPage.java:127)
-	at co.qa.test.RegisterTest.registerTest(RegisterTest.java:42)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='regionalSite']"}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.13.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'Sachins-MacBook-Air.local', ip: 'fe80:0:0:0:816:6aa7:b7f8:9d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.5', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55104}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=MAC, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db), userDataDir=/var/folders/sm/g6dhhvcx5rgczyct6jl1qd4c0000gn/T/.org.chromium.Chromium.exzUyV}, takesHeapSnapshot=true, unhandledPromptBehavior=, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dfb78e71c81e5c4825dd41e7ef424778
+*** Element info: {Using=xpath, value=//input[@id='regionalSite']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:518)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+	at com.qa.pages.RegisterPage.verifyDomainPresent(RegisterPage.java:133)
+	at co.qa.test.RegisterTest.registerTest(RegisterTest.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,7 +118,27 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="setUp" is-config="true" duration-ms="1567" started-at="2018-10-21T15:39:46Z" finished-at="2018-10-21T15:39:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerTest(java.lang.String, java.lang.String)[pri:0, instance:co.qa.test.RegisterTest@548e7350]" name="registerTest" duration-ms="45102" started-at="2018-10-21T15:39:48Z" data-provider="domainNames" finished-at="2018-10-21T15:40:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[www.gujaratishaadicentre.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Gujarati]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerTest -->
